@@ -31,7 +31,7 @@ int main(int argc, char **argv)
             argv[i][s] = char(toupper(argv[i][s]));
             std::cout << (char)argv[i][s];
         }
-        if (i != argc - 1)
+        if (i != argc - 1) //aqui está errado, se colocar  Damnit " ! " "Sorry students, I thought this thing was off." ele printa espaços demais... rever essa lógica
             std::cout << " ";
     }
      std::cout << "\n";
