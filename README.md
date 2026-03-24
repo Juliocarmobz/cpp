@@ -3,7 +3,7 @@
 
 ## Things about cpp projects
 * Will follow de C++98 standards 
-* flags `-Wall -Wextra -Werror -std=c++98`
+* flags `   `
 * Exercise directories will be named like ex00, ex01 ...
 * Classes names must be in **UpperCamelCase**
 * Files containing class code will always be named according to the class name. For instance: ClassName.hpp/ClassName.h, ClassName.cpp, or ClassName.tpp.
