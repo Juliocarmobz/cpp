@@ -22,3 +22,5 @@
 
 ## References
 ### Intra CPP Bootcamp videos, studies will be at the practice folder
+
+c++ -Wall -Wextra -Werror -std=c++98 -g megaphone.cpp
