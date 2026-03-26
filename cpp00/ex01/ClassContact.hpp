@@ -12,6 +12,8 @@ class Contact
     std::string     darkestSecret;
 
     public:
+        int    getInputs(void);
+        //normalizeInputs(firstName, lastName, etc etc)
         //metodos de manipular e verificar os inputs e outputs
         //precisa fazer um contrutor e destrutor??
 
