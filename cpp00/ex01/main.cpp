@@ -20,6 +20,9 @@ int main(void)
         if (command == "ADD")
         {
             std::cout       << "Selected -> ADD" << std::endl;
+            newContact.getInputs();
+            //colocar esse novo contato no index 1 do array de contatos da lista telefonica phonebook e limpar os dados
+            //incrementar o index
         }
         else if (command == "SEARCH")
         {
