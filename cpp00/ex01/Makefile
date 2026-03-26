@@ -1,4 +1,4 @@
-SRC = ./ClassContact.cpp ./ClassContact.hpp ./ClassPhoneBook.cpp ./ClassPhoneBook.hpp ./main.cpp
+SRC = ./ClassContact.cpp ./ClassPhoneBook.cpp ./main.cpp
 
 CC = c++
 
