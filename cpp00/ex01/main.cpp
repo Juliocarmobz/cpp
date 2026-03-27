@@ -5,10 +5,11 @@
 
 int main(void)
 {
+    //fazer um array de objetos, Contact newContact[8] e vai jogando nessa lista, mas não sei se esse contact precisa estar na classe phonebook
     int         index;
-    (void) index;
     PhoneBook   phoneBook;
-    Contact     newContact;
+    Contact     newContact[8];
+    index = 0;
 
     while (true)
     {
@@ -20,9 +21,10 @@ int main(void)
         if (command == "ADD")
         {
             std::cout       << "Selected -> ADD" << std::endl;
-            newContact.getInputs();
+            newContact[index].getInputs();
             //colocar esse novo contato no index 1 do array de contatos da lista telefonica phonebook e limpar os dados
-            //incrementar o index
+            //if index == 7 index = index % 8?? algo assim
+            index++;
         }
         else if (command == "SEARCH")
         {
