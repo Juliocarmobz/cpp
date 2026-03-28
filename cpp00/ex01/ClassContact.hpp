@@ -12,10 +12,21 @@ class Contact
     std::string     darkestSecret;
 
     public:
-        int    getInputs(void);
+        // Contact();
+        // ~Contact();
+        //fazer getters and setters aqui (para poder usar contacts[i].setName() ou contacts[i].getName())
+
+        void    createContact(void);
+
+        
         //normalizeInputs(firstName, lastName, etc etc)
         //metodos de manipular e verificar os inputs e outputs
         //precisa fazer um contrutor e destrutor??
+        
+        // responsavel por
+        // - guardar dados
+        // - validar inputs
+        // - retornar informações
 
 
         

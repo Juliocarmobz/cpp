@@ -1,19 +1,15 @@
-//Contact new_contact[1].add()   array de contatos
 #include "ClassPhoneBook.hpp"
 #include "ClassContact.hpp"
 #include <iostream>
 
 int main(void)
 {
-    //fazer um array de objetos, Contact newContact[8] e vai jogando nessa lista, mas não sei se esse contact precisa estar na classe phonebook
-    int         index;
-    PhoneBook   phoneBook;
-    Contact     newContact[8];
-    index = 0;
+    PhoneBook       phoneBook;
+    std::string     command;
 
     while (true)
     {
-        std::string     command;
+        command = "";
         std::cout       << "Please enter one of the following COMMANDS" << std::endl;
         std::cout       << "ADD  |  SEARCH  |  EXIT" << std::endl;
         std::getline (std::cin, command);
@@ -21,23 +17,25 @@ int main(void)
         if (command == "ADD")
         {
             std::cout       << "Selected -> ADD" << std::endl;
-            newContact[index].getInputs();
-            //colocar esse novo contato no index 1 do array de contatos da lista telefonica phonebook e limpar os dados
-            //if index == 7 index = index % 8?? algo assim
-            index++;
+            phoneBook.addContact();
         }
         else if (command == "SEARCH")
         {
             std::cout       << "Selected -> SEARCH" << std::endl;
+            //phoneBook.searchContact();
         }
         else if (command == "EXIT")
         {
             std::cout       << "Selected -> EXIT" << std::endl;
+            return (0);
         }
         else
             std::cout   << "Invalid COMMAND" << std::endl;
-        //se o comando for ADD, entra na logica de add contato, se for SEARCH, entra na logica de procurar, se for EXIT, encerra
     }
-
     return (0);
 }
+
+// PhoneBook
+//  ├── Contact[0]
+//  ├── Contact[1]
+//  ├── Contact[2]

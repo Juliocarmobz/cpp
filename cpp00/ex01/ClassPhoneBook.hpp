@@ -5,13 +5,24 @@
 
 class PhoneBook
 {
-    Contact contact;
+    Contact     contacts[8];
+    int         index;
 
-
+    
+    
     public:
+        PhoneBook();
+        ~PhoneBook();
+        int    addContact(void); //TO DO chamar setContact 
+
     //metodo add contato
     //metodo exit (encerrar no o programa)
 
+    // reponsavel por 
+    // - armazenar Contact[8]
+    // - controlar índice
+    // - adicionar contatos
+    // - mostrar contatos
 
 };
 
