@@ -17,6 +17,8 @@ class Contact
         //fazer getters and setters aqui (para poder usar contacts[i].setName() ou contacts[i].getName())
 
         void    createContact(void);
+        void    printInfo(int i);
+        void    printContact(void);
 
         
         //normalizeInputs(firstName, lastName, etc etc)

@@ -1,23 +1,58 @@
 #include "ClassContact.hpp"
 #include <iostream>
+#include <cstdlib>
+#include <iomanip>
 
 //to do funcao 
 
+
+
 static std::string    getInputs(std::string prompt)
 {
-
-    //printar o prompt
+    std::cout << prompt << std::endl;
     std::string input;
-    std::getline (std::cin, input);
     while (1)
     {
-        if (!td::getline (std::cin, input))
+        if (!std::getline (std::cin, input))
+            exit(0);
+        if (!input.empty())
+            return input;
     }
-    while (input.empty() || input != EOF)
-        std::cout << prompt << std::endl;
-
     return (input);
 }
+
+// criar funcao transformPrint
+static void    transformPrint(std::string unformated)
+{
+    if (unformated.length() < 10)
+        std::cout << std::setw(10) << unformated << "|";
+    else
+        std::cout << unformated.substr(0, 9) << ".|";
+}
+
+void     Contact::printContact(void)
+{
+    std::cout << "First name: " << firstName << std::endl;
+    std::cout << "Last name: " << lastName << std::endl;
+    std::cout << "Nickname: " << nickName << std::endl;
+    std::cout << "Phone number: " << phoneNumber << std::endl;
+    std::cout << "Darkest secrect: " << darkestSecret << std::endl;
+
+
+    std::cout << std::endl;
+}
+
+
+void     Contact::printInfo(int i)
+{
+    std::cout << std::setw(9) << i << "|";
+    transformPrint(firstName);
+    transformPrint(lastName);
+    transformPrint(nickName);
+
+    std::cout << std::endl;
+}
+
 
 void     Contact::createContact(void)
 {
