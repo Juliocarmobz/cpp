@@ -7,13 +7,17 @@ class PhoneBook
 {
     Contact     contacts[8];
     int         index;
-
-    
+    int         count;
     
     public:
         PhoneBook();
         ~PhoneBook();
-        int    addContact(void); //TO DO chamar setContact 
+        // void   getName();
+        // void   getNickname();
+        // void
+        int    addContact(void); //TO DO chamar setContact
+        void   searchContact(void);
+
 
     //metodo add contato
     //metodo exit (encerrar no o programa)
