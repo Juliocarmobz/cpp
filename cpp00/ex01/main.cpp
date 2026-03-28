@@ -22,7 +22,7 @@ int main(void)
         else if (command == "SEARCH")
         {
             std::cout       << "Selected -> SEARCH" << std::endl;
-            //phoneBook.searchContact();
+            phoneBook.searchContact();
         }
         else if (command == "EXIT")
         {
