@@ -34,8 +34,3 @@ int main(void)
     }
     return (0);
 }
-
-// PhoneBook
-//  ├── Contact[0]
-//  ├── Contact[1]
-//  ├── Contact[2]
