@@ -3,10 +3,6 @@
 #include <cstdlib>
 #include <iomanip>
 
-//to do funcao 
-
-
-
 static std::string    getInputs(std::string prompt)
 {
     std::cout << prompt << std::endl;
@@ -21,7 +17,6 @@ static std::string    getInputs(std::string prompt)
     return (input);
 }
 
-// criar funcao transformPrint
 static void    transformPrint(std::string unformated)
 {
     if (unformated.length() < 10)
@@ -42,7 +37,6 @@ void     Contact::printContact(void)
     std::cout << std::endl;
 }
 
-
 void     Contact::printInfo(int i)
 {
     std::cout << std::setw(9) << i << "|";
@@ -52,7 +46,6 @@ void     Contact::printInfo(int i)
 
     std::cout << std::endl;
 }
-
 
 void     Contact::createContact(void)
 {
