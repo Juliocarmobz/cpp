@@ -12,22 +12,15 @@ class PhoneBook
     public:
         PhoneBook();
         ~PhoneBook();
-        // void   getName();
-        // void   getNickname();
-        // void
-        int    addContact(void); //TO DO chamar setContact
+
+        int    addContact(void);
         void   searchContact(void);
-
-
-    //metodo add contato
-    //metodo exit (encerrar no o programa)
 
     // reponsavel por 
     // - armazenar Contact[8]
     // - controlar índice
     // - adicionar contatos
     // - mostrar contatos
-
 };
 
 #endif
