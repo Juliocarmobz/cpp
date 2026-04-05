@@ -1,6 +1,7 @@
 #include "ClassPhoneBook.hpp"
 #include "ClassContact.hpp"
 #include <iostream>
+#include <cstdlib>
 
 int main(void)
 {
@@ -12,7 +13,8 @@ int main(void)
         command = "";
         std::cout       << "Please enter one of the following COMMANDS" << std::endl;
         std::cout       << "ADD  |  SEARCH  |  EXIT" << std::endl;
-        std::getline (std::cin, command);
+        if (!std::getline (std::cin, command))
+            exit(1);
 
         if (command == "ADD")
         {

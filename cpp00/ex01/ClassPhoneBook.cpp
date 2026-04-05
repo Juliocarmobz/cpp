@@ -2,6 +2,7 @@
 #include <iostream>
 #include <iomanip>
 #include <sstream>
+#include <cstdlib>
 
 PhoneBook::PhoneBook(void)
 {
@@ -44,11 +45,13 @@ void    PhoneBook::searchContact(void)
         i++;
     }
     std::cout << "Select index: ";
-    std::getline (std::cin, selectedIndex);
+    if (!std::getline (std::cin, selectedIndex))
+        exit(1);
     while (selectedIndex.empty())
     {
         std::cout << "Select index: ";
-        std::getline (std::cin, selectedIndex);
+        if (!std::getline (std::cin, selectedIndex))
+            exit (1);
     }
     std::stringstream ss(selectedIndex);
     if (!(ss >> i) || !(ss.eof()) || (i < 0) || i >= count)

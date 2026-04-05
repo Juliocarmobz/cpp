@@ -10,7 +10,7 @@ static std::string    getInputs(std::string prompt)
     while (1)
     {
         if (!std::getline (std::cin, input))
-            exit(0);
+            exit(1);
         if (!input.empty())
             return input;
     }
