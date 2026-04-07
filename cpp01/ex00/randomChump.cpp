@@ -1,9 +1,9 @@
 #include "ClassZombie.hpp"
 #include <iostream>
 
-void randomChump( std::string name )
+void Zombie::randomChump( std::string name )
 {
-    Zombie random;
+    Zombie random(name);
 
     random.announce();
 }

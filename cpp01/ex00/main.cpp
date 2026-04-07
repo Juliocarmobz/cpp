@@ -4,8 +4,12 @@
 
 int     main(void)
 {
-    Zombie  test;
+    Zombie  testStack("julio");
+    Zombie* testHeap;
 
-    test.randomChump("julio");
+    testStack.randomChump("julio2");
+    testHeap = testStack.newZombie("Malloc");
+    testHeap->randomChump("MallocStack");
+    delete testHeap;
     return (0);
 }

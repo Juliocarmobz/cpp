@@ -1,27 +1,18 @@
 #include "ClassZombie.hpp"
 
-Zombie::Zombie(void)
+Zombie::Zombie(std::string name) : _name(name)
 {
-    this->name = "default";
+    std::cout << "Creating Zombie: " << this->_name << std::endl;
     return ;
 }
 
 Zombie::~Zombie(void)
 {
-    std::cout << "Destroying Zombie: " << this->name << std::endl;
+    std::cout << "Destroying Zombie: " << this->_name << std::endl;
     return ;
 }
 
 void    Zombie::announce(void)
 {
-    std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
-
-// Zombie* newZombie( std::string name )
-// {
-//     std::string     Zombie::*p = NULL;
-//     Zombie          newzombie;
-
-//     newzombie.*name = name;
-//     return (&newzombie);
-// }
