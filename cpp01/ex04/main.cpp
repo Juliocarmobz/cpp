@@ -6,28 +6,34 @@
 
 /*
     pegar a linha toda, procurar a s1
-    enquanto 
+    enquanto tiver ocorrecia
 
 
 */
 static void string_replace(std::string *line, const char* s1, const char* s2)
 {
-    if (s1 != '\0')
+    if (std::string(s1).empty())
         return ;
-    std::string     rest_line;
-    size_t pos = line->find(s1);
-    while (pos != string::npos)
-    {
-        
-    }
 
+    size_t          start = 0;
+    std::string     new_string = "";
+    size_t          pos = line->find(s1);
+
+    while (pos != std::string::npos)
+    {
+        new_string = line->substr(start, pos);
+        new_string += std::string(s2);
+        start = pos;
+        pos = line->find(s1);
+    }
+    *line = new_string;
     return ;
 }
 
 
 int main(int ac, char **av)
 {
-    if (ac != 4 || av[2] != '\0')
+    if (ac != 4)
     {
         std::cout << "Wrong input, please insert <./sedisforlosers> <filename> <string1> <string2>" << std::endl;
         exit(1);
