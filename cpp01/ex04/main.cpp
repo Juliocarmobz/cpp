@@ -17,16 +17,22 @@ static void string_replace(std::string *line, const char* s1, const char* s2)
 
     size_t          start = 0;
     std::string     new_string = "";
-    size_t          pos = line->find(s1);
+    size_t          pos = line->find(s1, start);
+    size_t          len_s1;
 
+    len_s1 = std::string(s1).size();
     while (pos != std::string::npos)
     {
-        new_string = line->substr(start, pos);
+        new_string += line->substr(start, pos - start);
         new_string += std::string(s2);
-        start = pos;
-        pos = line->find(s1);
+        start = pos + len_s1;
+        pos = line->find(s1, start);
     }
-    *line = new_string;
+    if (start)
+    {
+        new_string += line->substr(start, line->size()); //colocar a parte ainda restante
+        *line = new_string;
+    }
     return ;
 }
 
