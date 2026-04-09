@@ -30,7 +30,7 @@ static void string_replace(std::string *line, const char* s1, const char* s2)
     }
     if (start)
     {
-        new_string += line->substr(start, line->size()); //colocar a parte ainda restante
+        new_string += line->substr(start, line->size()); //coloca a parte ainda restante
         *line = new_string;
     }
     return ;
