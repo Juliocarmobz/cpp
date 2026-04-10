@@ -32,10 +32,10 @@ void    Harl::error(void)
 
 void    Harl::complain( std::string level )
 {
-    std::string     levels[4] = {"DEBUG", "WARNING", "ERROR", "INFO"};
+    const std::string     levels[4] = {"DEBUG", "WARNING", "ERROR", "INFO"};
     void (Harl::*ptr[4])(void) = {&Harl::debug, &Harl::warning, &Harl::error, &Harl::info};
 
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 4; i++)
     {
         if (level == levels[i])
         {
@@ -43,7 +43,7 @@ void    Harl::complain( std::string level )
             return ;
         }
     }
-    std::cout << "Wrong inicialization" << std::endl; // se nao chamar a funcao, level tiver vazio ou escrever errado printa isso
+    std::cout << "Wrong inicialization" << std::endl;
     return ;
 }
 
