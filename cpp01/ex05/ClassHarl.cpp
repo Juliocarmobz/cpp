@@ -1,4 +1,10 @@
 #include "ClassHarl.hpp"
+#include <cstdlib>
+
+Harl::Harl()
+{
+    std::cout << "Harls constructor" << std::endl;
+}
 
 void    Harl::debug(void)
 {
@@ -8,13 +14,13 @@ void    Harl::debug(void)
 
 void    Harl::info(void)
 {
-    std::cout << "INFO LEVEL: I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
+    std::cout << "INFO LEVEL: I cannot believe adding extra bacon costs more money. You didn't put enough bacon in my burger! If you did, I wouldn't be asking for more!" << std::endl;
     return ;
 }
 
 void    Harl::warning(void)
 {
-    std::cout << "WARNING LEVEL: I think I deserve to have some extra bacon for free. I’ve been coming for years, whereas you started working here just last month." << std::endl;
+    std::cout << "WARNING LEVEL: I think I deserve to have some extra bacon for free. I've been coming for years, whereas you started working here just last month." << std::endl;
     return ;
 }
 
@@ -26,5 +32,22 @@ void    Harl::error(void)
 
 void    Harl::complain( std::string level )
 {
-    
+    std::string     levels[4] = {"DEBUG", "WARNING", "ERROR", "INFO"};
+    void (Harl::*ptr[4])(void) = {&Harl::debug, &Harl::warning, &Harl::error, &Harl::info};
+
+    for (int i = 0; i < 3; i++)
+    {
+        if (level == levels[i])
+        {
+            (this->*ptr[i])();
+            return ;
+        }
+    }
+    std::cout << "Wrong inicialization" << std::endl; // se nao chamar a funcao, level tiver vazio ou escrever errado printa isso
+    return ;
+}
+
+Harl::~Harl()
+{
+    std::cout << "Harls destructor" << std::endl;
 }
