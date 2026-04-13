@@ -4,7 +4,7 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
-NAME = harl2
+NAME = fixed_point_number
 
 OBJ = $(SRC:.cpp=.o)
 

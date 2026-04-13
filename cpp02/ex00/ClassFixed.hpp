@@ -1,15 +1,19 @@
 #ifndef CLASSFIXED_HPP
 # define CLASSFIXED_HPP
+# include <iostream>
+
 class Fixed
 {
     private:
-        int                 fixed_point_number_value;
-        static const int    number_fractional_bits;
+        int                 _fixed_point_number_value;
+        static const int    _number_fractional_bits = 8;
     public:
-        Fixed();
-        //copy constructor
-        //copy assignment operator overload
-        ~Fixed();
+        Fixed (void);
+        Fixed (Fixed const & src);
+        ~Fixed ();
+
+        Fixed & operator=(Fixed const & rhs);
+
         int                 getRawBits (void) const;
         void                setRawBits (int const raw);
 };
