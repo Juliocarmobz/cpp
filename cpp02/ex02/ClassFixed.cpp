@@ -104,7 +104,7 @@ bool    Fixed::operator<=(const Fixed & rhs) const
 
 bool    Fixed::operator!=(const Fixed & rhs) const
 {
-    return !(this->_fixed_point_number_value != rhs.getRawBits());
+    return !(this->_fixed_point_number_value == rhs.getRawBits());
 }
 
 Fixed   Fixed::operator+(const Fixed & rhs) const
@@ -137,4 +137,68 @@ Fixed   Fixed::operator/(const Fixed & rhs) const
 
     result = this->toFloat() / rhs.toFloat();
     return (Fixed(result));
+}
+
+Fixed    & Fixed::operator++(void)
+{
+    this->_fixed_point_number_value++;
+
+    return (*this);
+}
+
+Fixed   Fixed::operator++(int)
+{
+    Fixed temp(*this);
+
+    operator++();
+    return (temp);
+}
+
+Fixed    & Fixed::operator--(void)
+{
+    this->_fixed_point_number_value--;
+
+    return (*this);
+}
+
+Fixed   Fixed::operator--(int)
+{
+    Fixed temp(*this);
+
+    operator--();
+    return (temp);
+}
+
+const Fixed        & Fixed::min(const Fixed & num1, const Fixed &num2)
+{
+    if (num1 < num2)
+        return (num1);
+    else
+        return (num2);
+
+}
+
+Fixed        & Fixed::min(Fixed & num1, Fixed &num2)
+{
+    if (num1 < num2)
+        return (num1);
+    else
+        return (num2);
+}
+
+const Fixed        & Fixed::max(const Fixed & num1, const Fixed &num2)
+{
+    if (num1 > num2)
+        return (num1);
+    else
+        return (num2);
+
+}
+
+Fixed        & Fixed::max(Fixed & num1, Fixed &num2)
+{
+    if (num1 > num2)
+        return (num1);
+    else
+        return (num2);
 }
