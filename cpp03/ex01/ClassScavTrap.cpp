@@ -67,7 +67,7 @@ void ScavTrap::attack(const std::string& target)
 
 void ScavTrap::takeDamage(unsigned int amount)
 {
-    if (this->_hit_points == 0)
+    if (this->_hit_points < 1)
     {
         std::cout << "ScavTrap " << this->_name << " is already dead." << std::endl;
         return ;
@@ -99,6 +99,11 @@ void ScavTrap::beRepaired(unsigned int amount)
 
 void ScavTrap::guardGate(void)
 {
+    if (this->_hit_points < 1)
+    {
+        std::cout << "ScavTrap " << this->_name << " is already dead and cannot be in Gate keeper mode." << std::endl;
+        return ;
+    }
     std::cout << "ScavTrap is now in Gate keeper mode." << std::endl;
     return ;
 }
