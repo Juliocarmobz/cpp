@@ -12,7 +12,6 @@ class ClapTrap
         unsigned int                 _attack_damage; //initialized with 0
 
     public:
-        //TODO canonical orhodox class form 
         ClapTrap ();
         ClapTrap (const std::string name);
         ClapTrap (ClapTrap const & src);
