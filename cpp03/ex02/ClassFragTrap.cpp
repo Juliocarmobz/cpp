@@ -67,7 +67,7 @@ void FragTrap::attack(const std::string& target)
 
 void FragTrap::takeDamage(unsigned int amount)
 {
-    if (this->_hit_points == 0)
+    if (this->_hit_points < 1)
     {
         std::cout << "FragTrap " << this->_name << " is already dead." << std::endl;
         return ;
