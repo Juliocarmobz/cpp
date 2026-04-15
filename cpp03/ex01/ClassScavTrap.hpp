@@ -32,6 +32,3 @@ class ScavTrap: public ClapTrap
 };
 
 # endif
-
-ScavTrap a;
-
