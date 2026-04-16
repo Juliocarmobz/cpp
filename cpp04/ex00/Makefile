@@ -1,4 +1,4 @@
-SRC = ./main.cpp ./ClassAnimal.cpp ./ClassDog.cpp ./ClassCat.cpp ./ClassWrongAnimal.cpp ./ClassWrongCat ./ClassWrongDog
+SRC = ./main.cpp ./ClassAnimal.cpp ./ClassDog.cpp ./ClassCat.cpp ./ClassWrongAnimal.cpp ./ClassWrongCat.cpp ./ClassWrongDog.cpp
 
 CC = c++
 
