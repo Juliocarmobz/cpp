@@ -1,36 +1,32 @@
 #include "ClassAnimal.hpp"
 #include "ClassCat.hpp"
 #include "ClassDog.hpp"
-#include "ClassWrongAnimal.hpp"
-#include "ClassWrongCat.hpp"
-#include "ClassWrongDog.hpp"
 #include <iostream>
 
 int main()
 {
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound(); //will output the cat sound!
-    j->makeSound();
-    meta->makeSound();
+    const int size = 10;
+    Animal* animals[size];
 
-    delete j;
-    delete i;
-    delete meta;
+    std::cout << "\n---- Creating animals ----\n" << std::endl;
 
-    std::cout << "-----------WrongClasses-----------" << std::endl;
-    const WrongAnimal* meta2 = new WrongAnimal();
-    const WrongAnimal* i2 = new WrongCat();
+    for (int i = 0; i < size / 2; i++)
+        animals[i] = new Dog();
 
-    std::cout << i2->getType() << std::endl;
+    for (int i = size / 2; i < size; i++)
+        animals[i] = new Cat();
 
-    i2->makeSound();
+    std::cout << "\n---- Testing sounds ----\n" << std::endl;
 
-    delete i2;
-    delete meta2;
+    for (int i = 0; i < size; i++)
+        animals[i]->makeSound();
 
-    return 0;
+    std::cout << "\n---- Deleting animals ----\n" << std::endl;
+
+    for (int i = 0; i < size; i++)
+        delete animals[i];
+
+    // Dog original;
+    // Dog copy = original;
+    return (0);
 }
