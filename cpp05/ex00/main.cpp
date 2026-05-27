@@ -3,7 +3,7 @@
 
 int     main(void)
 {
-
+    // try catch blocks needs to be here
     Bureaucrat edmilson("Edmilson", 30);
     std::cout << edmilson << std::endl;
 
