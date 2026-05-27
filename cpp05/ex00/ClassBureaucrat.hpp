@@ -6,22 +6,21 @@
 class Bureaucrat
 {
     private:
-        std::string         _name;
-        int                 _grade;
+        const std::string           _name;
+        int                         _grade;
     
     public:
-    //orthodox canonical form here, getter and setters for name and grade and overload insertion operator
-        Bureaucrat(); // default constructor
-        Bureaucrat (const std::string name, int grade); // inicializated constructor
-        Bureaucrat (Bureaucrat const & src); // copy constructor
-        ~Bureaucrat(); // default destructor
-        Bureaucrat & operator=(const Bureaucrat & rhs); //copy assignment operator
+        Bureaucrat();
+        Bureaucrat (const std::string& name, int grade);
+        Bureaucrat (Bureaucrat const & src);
+        ~Bureaucrat();
+        Bureaucrat & operator=(const Bureaucrat & rhs);
     
         std::string         getName (void) const;
         int                 getGrade (void) const;
         void                incrementGrade();
         void                decrementGrade();
-        void                gradeValidation (void);
+        void                gradeValidation (int grade_verfication);
 
 
     class GradeTooHighException : public std::exception
@@ -29,7 +28,7 @@ class Bureaucrat
         public:
             virtual const char* what() const throw()
             {
-                return ("The Grade is Too High");
+                return ("Exception: The Grade is Too High");
             }
     };
     
@@ -38,7 +37,7 @@ class Bureaucrat
         public:
             virtual const char* what() const throw()
             {
-                return ("The Grade is Too Low");
+                return ("Exception: The Grade is Too Low");
             }
     };
 };
