@@ -17,17 +17,30 @@ class Bureaucrat
         ~Bureaucrat(); // default destructor
         Bureaucrat & operator=(const Bureaucrat & rhs); //copy assignment operator
     
-        void getName();
-        void getGrade();
-        void incrementGrade();
-        void decrementGrade();
+        std::string         getName (void) const;
+        int                 getGrade (void) const;
+        void                incrementGrade();
+        void                decrementGrade();
+        void                gradeValidation (void);
 
 
-    class ExceptionClass : public std::exception
+    class GradeTooHighException : public std::exception
     {
-        
+        public:
+            virtual const char* what() const throw()
+            {
+                return ("The Grade is Too High");
+            }
     };
     
+    class GradeTooLowException : public std::exception
+    {
+        public:
+            virtual const char* what() const throw()
+            {
+                return ("The Grade is Too Low");
+            }
+    };
 };
 
 std::ostream &  operator<<(std::ostream & o, Bureaucrat const & rhs); //overload output operator
