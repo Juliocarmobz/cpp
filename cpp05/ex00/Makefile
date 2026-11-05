@@ -1,4 +1,4 @@
-SRC = ./main.cpp ./ClassBureaucrat.cpp
+SRC = ./main.cpp ./Bureaucrat.cpp
 
 CC = c++
 

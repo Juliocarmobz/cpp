@@ -1,5 +1,5 @@
-#ifndef CLASSBUREAUCRAT_HPP
-# define CLASSBUREAUCRAT_HPP
+#ifndef BUREAUCRAT_HPP
+# define BUREAUCRAT_HPP
 # include <iostream>
 # include <stdexcept>
 
@@ -8,14 +8,14 @@ class Bureaucrat
     private:
         const std::string           _name;
         int                         _grade;
-    
+
     public:
         Bureaucrat();
         Bureaucrat (const std::string& name, int grade);
         Bureaucrat (Bureaucrat const & src);
         ~Bureaucrat();
         Bureaucrat & operator=(const Bureaucrat & rhs);
-    
+
         std::string         getName (void) const;
         int                 getGrade (void) const;
         void                incrementGrade();

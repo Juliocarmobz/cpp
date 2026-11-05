@@ -1,4 +1,4 @@
-#include "ClassBureaucrat.hpp"
+#include "Bureaucrat.hpp"
 #include <iostream>
 
 Bureaucrat::Bureaucrat () : _name("Default"), _grade(42)

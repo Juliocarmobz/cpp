@@ -1,10 +1,10 @@
-#include "ClassBureaucrat.hpp"
+#include "Bureaucrat.hpp"
 #include <iostream>
 
 int     main(void)
 {
-    Bureaucrat edmilson("Edmilson", 30);
-    std::cout << edmilson << std::endl;
+    // Bureaucrat edmilson("Edmilson", 30);
+    // std::cout << edmilson << std::endl;
 
     // Bureaucrat edmilson_copy;
     // edmilson_copy = edmilson;
