@@ -47,6 +47,17 @@ Bureaucrat::~Bureaucrat()
     return ;
 }
 
+const char *Bureaucrat::GradeTooHighException::what() const throw()
+{
+    return ("Exception: The Grade is Too High");
+
+}
+
+const char *Bureaucrat::GradeTooLowException::what() const throw()
+{
+    return ("Exception: The Grade is Too Low");
+}
+
 std::string     Bureaucrat::getName (void) const
 {
     // std::cout << "getName member function called" << std::endl;
