@@ -7,7 +7,7 @@
 
 int main(void)
 {
-    // Lançando a semente (seed) para a função rand() no RobotomyRequestForm
+    // seed to funcion rand() for RobotomyRequestForm
     srand(time(NULL));
 
     std::cout << "\n=============================================" << std::endl;
@@ -17,7 +17,7 @@ int main(void)
     {
         Bureaucrat edmilson("Edmilson", 137); // Nota suficiente para executar (req: 137)
         Bureaucrat estagiario("Estagiario", 145); // Nota só para assinar (req: 145)
-        ShrubberyCreationForm shrubbery("Jardim");
+        ShrubberyCreationForm shrubbery("Zuno");
         
         std::cout << shrubbery << std::endl;
         
@@ -72,6 +72,9 @@ int main(void)
         
         // Edmilson executa
         edmilson.executeForm(pardon);
+
+        // Estagiario tenta executar
+        estagiario.executeForm(pardon);
     }
     catch (std::exception & e)
     {
